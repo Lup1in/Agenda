@@ -87,6 +87,16 @@ h1 {
     font-size: 2rem;
 }
 
+h1 {
+    font-size: 4rem;
+}
+
+p {
+    padding-top: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
 .menu h1 a {
     color: black;
 }
@@ -117,4 +127,8 @@ h1 {
 
 .close-menu {
     display: none;
+}
+
+.githubcolor:hover {
+    color:#333;
 }
