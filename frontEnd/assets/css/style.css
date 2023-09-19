@@ -106,11 +106,15 @@ p {
 }
 
 .intro-content {
+    justify-content: center center;
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    display: flex;
     gap: var(--gap);
     min-height: 100vh;
+}
+
+.linguagens:hover {
+    color: rgb(17, 218, 17);
 }
 
 .intro-text,
