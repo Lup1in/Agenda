@@ -7,6 +7,7 @@ HomeModel.create({
     .catch(e => console.log(e));
 
 exports.homePage = (req, res) => {
+   // console.log(req.flash('error'));
     res.render('index');
 }
 exports.trataPost = (req, res) => {
