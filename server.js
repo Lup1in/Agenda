@@ -14,9 +14,9 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')
 const flash = require('connect-flash');
 
-const routes = require('./routes');
+const mainRoutes = require('./routes')
 const path = require('path');
-const myMiddle = require('./src/middlewares/middleware')
+const myMiddle = require('./src/middlewares/middleware.js');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.resolve(__dirname, 'public')));
@@ -38,7 +38,7 @@ app.set('views', path.resolve((__dirname, './views')));
 app.set('view engine', 'ejs');
 
 app.use(myMiddle);
-app.use(routes);
+app.use(mainRoutes);
 
 app.on('app pronto', () => {
     app.listen(3000, () => {

@@ -21137,37 +21137,36 @@ ___CSS_LOADER_EXPORT___.push([module.id, `* {
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-}
+};
 
 :root {
     --gap: 2rem;
     --lightgray-color: #eeeeee;
-}
+};
 
 html {
     scroll-behavior: smooth;
-}
+};
 
 body {
     background-color: white;
     font-family: 'Mooli', sans-serif;
-    font-size: 1.6rem
-}
+    font-size: 1.6rem;
+};
 
 h1 {
     font-size: 2rem;
-}
-
+};
 
 .main-content {
     max-width: 120rem;
     margin: 0 auto;
     padding: var(--gap);
-}
+};
 
 .section {
     min-height: 100vh;
-}
+};
 
 .menu {
     position: fixed;
@@ -21177,7 +21176,7 @@ h1 {
     width: 100%;
     z-index: 1;
     border-bottom: 0.01rem solid var(--lightgray-color);
-}
+};
 
 
 .menu-content {
@@ -21187,19 +21186,19 @@ h1 {
     align-items: center;
     padding-top: 0;
     padding-bottom: 0;
-}
+};
 
 .menu ul {
     list-style: none;
     display: flex;
-}
+};
 
 .menu ul li a {
     display: block;
     color: black;
     padding: 1rem;
     position: relative;
-}
+};
 
 .menu ul li a::after {
     content: '';
@@ -21210,33 +21209,33 @@ h1 {
     height: 0.2rem;
     background: black;
     transition: all 300ms ease-in-out;
-}
+};
 
 .menu ul li a:hover::after {
     width: 100%;
-}
+};
 
 .menu h1 {
     font-size: 2rem;
-}
+};
 
 h1 {
-    font-size: 4rem;
-}
+    font-size: 3rem;
+};
 
 p {
     padding-top: 10px;
-    font-size: 2rem;
-    font-weight: 700;
-}
+    font-size: 1rem;
+    
+};
 
 .menu h1 a {
     color: black;
-}
+};
 
 .menu-spacing {
     height: 65px;
-}
+};
 
 .intro-content {
     justify-content: center center;
@@ -21244,31 +21243,31 @@ p {
     display: flex;
     gap: var(--gap);
     min-height: 100vh;
-}
+};
 
 .linguagens:hover {
     color: rgb(17, 218, 17);
-}
+};
 
 .intro-text,
 .intro-img {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-}
+};
 
 .intro-img img {
     max-width: 100%;
     height: auto;
-}
+};
 
 .close-menu {
     display: none;
-}
+};
 
 .githubcolor:hover {
-    color:#333;
-}`, "",{"version":3,"sources":["webpack://./frontEnd/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,SAAS;IACT,UAAU;IACV,qBAAqB;IACrB,gBAAgB;IAChB,sBAAsB;AAC1B;;AAEA;IACI,WAAW;IACX,0BAA0B;AAC9B;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,uBAAuB;IACvB,gCAAgC;IAChC;AACJ;;AAEA;IACI,eAAe;AACnB;;;AAGA;IACI,iBAAiB;IACjB,cAAc;IACd,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,eAAe;IACf,MAAM;IACN,OAAO;IACP,QAAQ;IACR,WAAW;IACX,UAAU;IACV,mDAAmD;AACvD;;;AAGA;IACI,aAAa;IACb,uBAAuB;IACvB,6BAA6B;IAC7B,mBAAmB;IACnB,cAAc;IACd,iBAAiB;AACrB;;AAEA;IACI,gBAAgB;IAChB,aAAa;AACjB;;AAEA;IACI,cAAc;IACd,YAAY;IACZ,aAAa;IACb,kBAAkB;AACtB;;AAEA;IACI,WAAW;IACX,kBAAkB;IAClB,YAAY;IACZ,QAAQ;IACR,QAAQ;IACR,cAAc;IACd,iBAAiB;IACjB,iCAAiC;AACrC;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,iBAAiB;IACjB,eAAe;IACf,gBAAgB;AACpB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,8BAA8B;IAC9B,kBAAkB;IAClB,aAAa;IACb,eAAe;IACf,iBAAiB;AACrB;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;;IAEI,aAAa;IACb,sBAAsB;IACtB,uBAAuB;AAC3B;;AAEA;IACI,eAAe;IACf,YAAY;AAChB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,UAAU;AACd","sourcesContent":["* {\r\n    margin: 0;\r\n    padding: 0;\r\n    text-decoration: none;\r\n    list-style: none;\r\n    box-sizing: border-box;\r\n}\r\n\r\n:root {\r\n    --gap: 2rem;\r\n    --lightgray-color: #eeeeee;\r\n}\r\n\r\nhtml {\r\n    scroll-behavior: smooth;\r\n}\r\n\r\nbody {\r\n    background-color: white;\r\n    font-family: 'Mooli', sans-serif;\r\n    font-size: 1.6rem\r\n}\r\n\r\nh1 {\r\n    font-size: 2rem;\r\n}\r\n\r\n\r\n.main-content {\r\n    max-width: 120rem;\r\n    margin: 0 auto;\r\n    padding: var(--gap);\r\n}\r\n\r\n.section {\r\n    min-height: 100vh;\r\n}\r\n\r\n.menu {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    width: 100%;\r\n    z-index: 1;\r\n    border-bottom: 0.01rem solid var(--lightgray-color);\r\n}\r\n\r\n\r\n.menu-content {\r\n    display: flex;\r\n    justify-content: center;\r\n    justify-content: space-around;\r\n    align-items: center;\r\n    padding-top: 0;\r\n    padding-bottom: 0;\r\n}\r\n\r\n.menu ul {\r\n    list-style: none;\r\n    display: flex;\r\n}\r\n\r\n.menu ul li a {\r\n    display: block;\r\n    color: black;\r\n    padding: 1rem;\r\n    position: relative;\r\n}\r\n\r\n.menu ul li a::after {\r\n    content: '';\r\n    position: absolute;\r\n    bottom: 1rem;\r\n    left: 0%;\r\n    width: 0;\r\n    height: 0.2rem;\r\n    background: black;\r\n    transition: all 300ms ease-in-out;\r\n}\r\n\r\n.menu ul li a:hover::after {\r\n    width: 100%;\r\n}\r\n\r\n.menu h1 {\r\n    font-size: 2rem;\r\n}\r\n\r\nh1 {\r\n    font-size: 4rem;\r\n}\r\n\r\np {\r\n    padding-top: 10px;\r\n    font-size: 2rem;\r\n    font-weight: 700;\r\n}\r\n\r\n.menu h1 a {\r\n    color: black;\r\n}\r\n\r\n.menu-spacing {\r\n    height: 65px;\r\n}\r\n\r\n.intro-content {\r\n    justify-content: center center;\r\n    position: relative;\r\n    display: flex;\r\n    gap: var(--gap);\r\n    min-height: 100vh;\r\n}\r\n\r\n.linguagens:hover {\r\n    color: rgb(17, 218, 17);\r\n}\r\n\r\n.intro-text,\r\n.intro-img {\r\n    display: flex;\r\n    flex-flow: column wrap;\r\n    justify-content: center;\r\n}\r\n\r\n.intro-img img {\r\n    max-width: 100%;\r\n    height: auto;\r\n}\r\n\r\n.close-menu {\r\n    display: none;\r\n}\r\n\r\n.githubcolor:hover {\r\n    color:#333;\r\n}"],"sourceRoot":""}]);
+    color: #333;
+};`, "",{"version":3,"sources":["webpack://./frontEnd/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,SAAS;IACT,UAAU;IACV,qBAAqB;IACrB,gBAAgB;IAChB,sBAAsB;AAC1B,CAAA;;AAEA;IACI,WAAW;IACX,0BAA0B;AAC9B,CAAA;;AAEA;IACI,uBAAuB;AAC3B,CAAA;;AAEA;IACI,uBAAuB;IACvB,gCAAgC;IAChC,iBAAiB;AACrB,CAAA;;AAEA;IACI,eAAe;AACnB,CAAA;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,mBAAmB;AACvB,CAAA;;AAEA;IACI,iBAAiB;AACrB,CAAA;;AAEA;IACI,eAAe;IACf,MAAM;IACN,OAAO;IACP,QAAQ;IACR,WAAW;IACX,UAAU;IACV,mDAAmD;AACvD,CAAA;;;AAGA;IACI,aAAa;IACb,uBAAuB;IACvB,6BAA6B;IAC7B,mBAAmB;IACnB,cAAc;IACd,iBAAiB;AACrB,CAAA;;AAEA;IACI,gBAAgB;IAChB,aAAa;AACjB,CAAA;;AAEA;IACI,cAAc;IACd,YAAY;IACZ,aAAa;IACb,kBAAkB;AACtB,CAAA;;AAEA;IACI,WAAW;IACX,kBAAkB;IAClB,YAAY;IACZ,QAAQ;IACR,QAAQ;IACR,cAAc;IACd,iBAAiB;IACjB,iCAAiC;AACrC,CAAA;;AAEA;IACI,WAAW;AACf,CAAA;;AAEA;IACI,eAAe;AACnB,CAAA;;AAEA;IACI,eAAe;AACnB,CAAA;;AAEA;IACI,iBAAiB;IACjB,eAAe;;AAEnB,CAAA;;AAEA;IACI,YAAY;AAChB,CAAA;;AAEA;IACI,YAAY;AAChB,CAAA;;AAEA;IACI,8BAA8B;IAC9B,kBAAkB;IAClB,aAAa;IACb,eAAe;IACf,iBAAiB;AACrB,CAAA;;AAEA;IACI,uBAAuB;AAC3B,CAAA;;AAEA;;IAEI,aAAa;IACb,sBAAsB;IACtB,uBAAuB;AAC3B,CAAA;;AAEA;IACI,eAAe;IACf,YAAY;AAChB,CAAA;;AAEA;IACI,aAAa;AACjB,CAAA;;AAEA;IACI,WAAW;AACf,CAAA","sourcesContent":["* {\r\n    margin: 0;\r\n    padding: 0;\r\n    text-decoration: none;\r\n    list-style: none;\r\n    box-sizing: border-box;\r\n};\r\n\r\n:root {\r\n    --gap: 2rem;\r\n    --lightgray-color: #eeeeee;\r\n};\r\n\r\nhtml {\r\n    scroll-behavior: smooth;\r\n};\r\n\r\nbody {\r\n    background-color: white;\r\n    font-family: 'Mooli', sans-serif;\r\n    font-size: 1.6rem;\r\n};\r\n\r\nh1 {\r\n    font-size: 2rem;\r\n};\r\n\r\n.main-content {\r\n    max-width: 120rem;\r\n    margin: 0 auto;\r\n    padding: var(--gap);\r\n};\r\n\r\n.section {\r\n    min-height: 100vh;\r\n};\r\n\r\n.menu {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    width: 100%;\r\n    z-index: 1;\r\n    border-bottom: 0.01rem solid var(--lightgray-color);\r\n};\r\n\r\n\r\n.menu-content {\r\n    display: flex;\r\n    justify-content: center;\r\n    justify-content: space-around;\r\n    align-items: center;\r\n    padding-top: 0;\r\n    padding-bottom: 0;\r\n};\r\n\r\n.menu ul {\r\n    list-style: none;\r\n    display: flex;\r\n};\r\n\r\n.menu ul li a {\r\n    display: block;\r\n    color: black;\r\n    padding: 1rem;\r\n    position: relative;\r\n};\r\n\r\n.menu ul li a::after {\r\n    content: '';\r\n    position: absolute;\r\n    bottom: 1rem;\r\n    left: 0%;\r\n    width: 0;\r\n    height: 0.2rem;\r\n    background: black;\r\n    transition: all 300ms ease-in-out;\r\n};\r\n\r\n.menu ul li a:hover::after {\r\n    width: 100%;\r\n};\r\n\r\n.menu h1 {\r\n    font-size: 2rem;\r\n};\r\n\r\nh1 {\r\n    font-size: 3rem;\r\n};\r\n\r\np {\r\n    padding-top: 10px;\r\n    font-size: 1rem;\r\n    \r\n};\r\n\r\n.menu h1 a {\r\n    color: black;\r\n};\r\n\r\n.menu-spacing {\r\n    height: 65px;\r\n};\r\n\r\n.intro-content {\r\n    justify-content: center center;\r\n    position: relative;\r\n    display: flex;\r\n    gap: var(--gap);\r\n    min-height: 100vh;\r\n};\r\n\r\n.linguagens:hover {\r\n    color: rgb(17, 218, 17);\r\n};\r\n\r\n.intro-text,\r\n.intro-img {\r\n    display: flex;\r\n    flex-flow: column wrap;\r\n    justify-content: center;\r\n};\r\n\r\n.intro-img img {\r\n    max-width: 100%;\r\n    height: auto;\r\n};\r\n\r\n.close-menu {\r\n    display: none;\r\n};\r\n\r\n.githubcolor:hover {\r\n    color: #333;\r\n};"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
