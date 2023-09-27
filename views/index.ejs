@@ -1,13 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda</title>
-</head>
-<body>
-    
+<%- include('includes/head.ejs'); %>
+    <%- include('includes/nav.ejs'); %>
 
-    <script src="/assets/js/bundle.js"></script>
-</body>
-</html>
+        <div class="container">
+            <div class="">
+                <div class=""></div>
+
+                <div class="">
+                    <h1 class="agendaH1">Agenda</h1>
+                    <p class="agendaP">Seus contatos estão abaixo.</p>
+
+                    <div class="errorDIV">um erro qualquer</div>
+
+                </div>
+
+                <div class=""></div>
+
+                <div class="responsive-table">
+                    <table class="table">
+                        <tr>
+                            <td class="name">Luiz </td>
+                            <td class="surname">Gabriel</td>
+                            <td class="number">59483848328</td>
+                            <td class="email">otaviogabriel@gmail.com</td>
+
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <%- include('includes/fotter.ejs'); %>
