@@ -105,8 +105,6 @@ a {
     align-items: center;
 }
 
-
-
 .errorDIV {
     background-color: rgba(240, 21, 21, 0.295);
     border-radius: 8px;
@@ -124,9 +122,33 @@ a {
     justify-content: center;
 }
 
-.table {
-    padding: 20px;
+.tableDIV {
     height: 100px;
+    width: 200px;    
+};
+
+.form-group {
     width: 200px;
-    
+    height: 200px;
+}
+label { 
+    font-size: 25px;
+}
+input {
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+button {
+    width: 250px;
+    height: 30px;
+    border-radius: 6px;
+}
+
+.spacing {
+    padding: 10px;
+}
+
+.signuphere {
+    color: rgba(50, 50, 230, 0.849);
 }
