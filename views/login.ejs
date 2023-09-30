@@ -1,37 +1,35 @@
 <%- include('includes/head.ejs'); %>
     <%- include('includes/navLogin.ejs'); %>
         <div class="container">
-            <div class="">
-                <div class=""></div>
-                <div class="">
-                    <h1>Entre na sua Agenda! </h1>
-                    <div class="spacing"></div>
-                    <form action="">
-                        <div class="form-group">
-                            <label for="">Nome</label> <br>
-                            <input type="text" name="nickname" placeholder="Nickname">
-                        </div>
+            <div>
+                <div>
+                    <h1 class="hello">Olá!</h1>
+                    <h2 class="hellobellow">Tenha uma Agenda! </h1>
                         <div class="spacing"></div>
-                        <div class="form-group">
-                            <label for="">E-mail</label> <br>
-                            <input type="email" name="email" placeholder="Email">
+                        <form action="/login/register" method="POST">
+
+                            <div class="form-group">
+                                <label for="">name</label> <br>
+                                <input type="text" name="nickname" placeholder="">
+                            </div>
                             <div class="spacing"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="">Senha</label> <br>
-                            <input type="password" name="password" placeholder="Password">
-                        </div>
-                        <div class="spacing"></div>
-                        <div class="testandob">
-                            <button>Cadastrar</button>
-                        </div>
-                    </form>
+                            <div class="form-group">
+                                <label for="e-mail">e-mail</label><br>
+                                <input type="email" name="email" placeholder="">
+                                <div class="spacing"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">password</label><br>
+                                <input type="password" name="password" placeholder="">
+                            </div>
+                            <div class="spacing"></div>
+                            <div class="testandob">
+                                <button>Login</button>
+                            </div>
+                        </form>
                 </div>
+                <div class="spacing"></div>
                 <div>Já tem uma conta? <span class="signuphere">entre aqui</span></div>
             </div>
-        
         </div>
-
-
-
         <%- include('includes/fotter.ejs'); %>

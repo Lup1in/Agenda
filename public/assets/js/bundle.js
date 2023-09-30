@@ -21222,6 +21222,20 @@ a {
     justify-content: center;
     align-items: center;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap);
+    counter-reset: gridcounter;
+}
+
+.grid-one-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
 .agendaH1 {
     display: flex;
     padding-bottom: 10px;
@@ -21257,25 +21271,27 @@ a {
 
 .tableDIV {
     height: 100px;
-    width: 200px;    
-};
-
-.form-group {
     width: 200px;
-    height: 200px;
 }
-label { 
+
+label {
     font-size: 25px;
 }
+
 input {
+    width: 400px;
     font-size: 20px;
     border-radius: 5px;
+    border-style: 0.5px solid black;
 }
 
 button {
-    width: 250px;
+    width: 400px;
     height: 30px;
     border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .spacing {
@@ -21284,7 +21300,26 @@ button {
 
 .signuphere {
     color: rgba(50, 50, 230, 0.849);
-}`, "",{"version":3,"sources":["webpack://./frontEnd/css/style.css"],"names":[],"mappings":"AAAA;IACI,WAAW;AACf;;AAEA;IACI,aAAa;IACb,SAAS;IACT,UAAU;IACV,sBAAsB;AAC1B;;AAEA;IACI,yCAAyC;AAC7C;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,kBAAkB;IAClB,YAAY;IACZ,eAAe;AACnB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,UAAU;IACV,eAAe;IACf,2BAA2B;IAC3B,MAAM;IACN,OAAO;IACP,QAAQ;IACR,WAAW;AACf;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,cAAc;IACd,iBAAiB;AACrB;;AAEA;IACI,gBAAgB;IAChB,aAAa;AACjB;;AAEA;IACI,cAAc;IACd,aAAa;IACb,iBAAiB;IACjB,cAAc;IACd,kBAAkB;IAClB,gBAAgB;IAChB,0BAA0B;IAC1B,aAAa;IACb,qBAAqB;AACzB;;AAEA;IACI,2BAA2B;AAC/B;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,iBAAiB;AACrB;;AAEA;IACI,qBAAqB;AACzB;;AAEA;IACI,iBAAiB;IACjB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;AACA;IACI,aAAa;IACb,oBAAoB;IACpB,uBAAuB;IACvB,mBAAmB;IACnB,eAAe;AACnB;;AAEA;IACI,eAAe;IACf,oBAAoB;IACpB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,0CAA0C;IAC1C,kBAAkB;IAClB,YAAY;IACZ,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,YAAY;AAChB,CAAA;;AAEA;IACI,YAAY;IACZ,aAAa;AACjB;AACA;IACI,eAAe;AACnB;AACA;IACI,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,+BAA+B;AACnC","sourcesContent":[":root {\r\n    --gap: 3rem;\r\n}\r\n\r\n* {\r\n    outline: none;\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n    font-family: 'Inclusive Sans', sans-serif;\r\n}\r\n\r\nhtml {\r\n    scroll-behavior: smooth;\r\n}\r\n\r\n.main-content {\r\n    max-width: 120rem;\r\n    margin: 0 auto;\r\n    padding: var(--gap);\r\n}\r\n\r\n.intro-content {\r\n    padding-top: 7rem;\r\n    position: relative;\r\n    height: 80vh;\r\n    gap: var(--gap);\r\n}\r\n\r\n.menu h1 a {\r\n    color: black;\r\n}\r\n\r\n.menu {\r\n    z-index: 1;\r\n    position: fixed;\r\n    background-color: #f5f5f5ad;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    width: 100%;\r\n}\r\n\r\n.menu-content {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    padding-top: 0;\r\n    padding-bottom: 0;\r\n}\r\n\r\n.menu ul {\r\n    list-style: none;\r\n    display: flex;\r\n}\r\n\r\n.menu ul li a {\r\n    display: block;\r\n    padding: 2rem;\r\n    font-size: 1.3rem;\r\n    color: #2B2730;\r\n    position: relative;\r\n    font-weight: 700;\r\n    text-transform: capitalize;\r\n    padding: 20px;\r\n    transition: 0.5s ease;\r\n}\r\n\r\n.menu ul:hover li a {\r\n    color: rgba(0, 0, 0, 0.575);\r\n}\r\n\r\n.menu ul:hover li a:not(:hover) {\r\n    color: black;\r\n    opacity: 0.3;\r\n    filter: blur(1px);\r\n}\r\n\r\na {\r\n    text-decoration: none;\r\n}\r\n\r\n.container {\r\n    padding-top: 5rem;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n.agendaH1 {\r\n    display: flex;\r\n    padding-bottom: 10px;\r\n    justify-content: center;\r\n    align-items: center;\r\n    font-size: 3rem;\r\n}\r\n\r\n.agendaP {\r\n    font-size: 2rem;\r\n    padding-bottom: 10px;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.errorDIV {\r\n    background-color: rgba(240, 21, 21, 0.295);\r\n    border-radius: 8px;\r\n    width: 600px;\r\n    height: 50px;\r\n    padding: 10px;\r\n    align-items: center;\r\n    display: flex;\r\n}\r\n\r\n.responsive-table {\r\n    padding: 20px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.tableDIV {\r\n    height: 100px;\r\n    width: 200px;    \r\n};\r\n\r\n.form-group {\r\n    width: 200px;\r\n    height: 200px;\r\n}\r\nlabel { \r\n    font-size: 25px;\r\n}\r\ninput {\r\n    font-size: 20px;\r\n    border-radius: 5px;\r\n}\r\n\r\nbutton {\r\n    width: 250px;\r\n    height: 30px;\r\n    border-radius: 6px;\r\n}\r\n\r\n.spacing {\r\n    padding: 10px;\r\n}\r\n\r\n.signuphere {\r\n    color: rgba(50, 50, 230, 0.849);\r\n}"],"sourceRoot":""}]);
+}
+
+.hello {
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hellobellow {
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.formulario1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}`, "",{"version":3,"sources":["webpack://./frontEnd/css/style.css"],"names":[],"mappings":"AAAA;IACI,WAAW;AACf;;AAEA;IACI,aAAa;IACb,SAAS;IACT,UAAU;IACV,sBAAsB;AAC1B;;AAEA;IACI,yCAAyC;AAC7C;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,kBAAkB;IAClB,YAAY;IACZ,eAAe;AACnB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,UAAU;IACV,eAAe;IACf,2BAA2B;IAC3B,MAAM;IACN,OAAO;IACP,QAAQ;IACR,WAAW;AACf;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,cAAc;IACd,iBAAiB;AACrB;;AAEA;IACI,gBAAgB;IAChB,aAAa;AACjB;;AAEA;IACI,cAAc;IACd,aAAa;IACb,iBAAiB;IACjB,cAAc;IACd,kBAAkB;IAClB,gBAAgB;IAChB,0BAA0B;IAC1B,aAAa;IACb,qBAAqB;AACzB;;AAEA;IACI,2BAA2B;AAC/B;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,iBAAiB;AACrB;;AAEA;IACI,qBAAqB;AACzB;;AAEA;IACI,iBAAiB;IACjB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,qCAAqC;IACrC,eAAe;IACf,0BAA0B;AAC9B;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,oBAAoB;IACpB,uBAAuB;IACvB,mBAAmB;IACnB,eAAe;AACnB;;AAEA;IACI,eAAe;IACf,oBAAoB;IACpB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,0CAA0C;IAC1C,kBAAkB;IAClB,YAAY;IACZ,YAAY;IACZ,aAAa;IACb,mBAAmB;IACnB,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,aAAa;IACb,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,YAAY;AAChB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,YAAY;IACZ,eAAe;IACf,kBAAkB;IAClB,+BAA+B;AACnC;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,kBAAkB;IAClB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,+BAA+B;AACnC;;AAEA;IACI,eAAe;IACf,gBAAgB;IAChB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB","sourcesContent":[":root {\r\n    --gap: 3rem;\r\n}\r\n\r\n* {\r\n    outline: none;\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n    font-family: 'Inclusive Sans', sans-serif;\r\n}\r\n\r\nhtml {\r\n    scroll-behavior: smooth;\r\n}\r\n\r\n.main-content {\r\n    max-width: 120rem;\r\n    margin: 0 auto;\r\n    padding: var(--gap);\r\n}\r\n\r\n.intro-content {\r\n    padding-top: 7rem;\r\n    position: relative;\r\n    height: 80vh;\r\n    gap: var(--gap);\r\n}\r\n\r\n.menu h1 a {\r\n    color: black;\r\n}\r\n\r\n.menu {\r\n    z-index: 1;\r\n    position: fixed;\r\n    background-color: #f5f5f5ad;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    width: 100%;\r\n}\r\n\r\n.menu-content {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    padding-top: 0;\r\n    padding-bottom: 0;\r\n}\r\n\r\n.menu ul {\r\n    list-style: none;\r\n    display: flex;\r\n}\r\n\r\n.menu ul li a {\r\n    display: block;\r\n    padding: 2rem;\r\n    font-size: 1.3rem;\r\n    color: #2B2730;\r\n    position: relative;\r\n    font-weight: 700;\r\n    text-transform: capitalize;\r\n    padding: 20px;\r\n    transition: 0.5s ease;\r\n}\r\n\r\n.menu ul:hover li a {\r\n    color: rgba(0, 0, 0, 0.575);\r\n}\r\n\r\n.menu ul:hover li a:not(:hover) {\r\n    color: black;\r\n    opacity: 0.3;\r\n    filter: blur(1px);\r\n}\r\n\r\na {\r\n    text-decoration: none;\r\n}\r\n\r\n.container {\r\n    padding-top: 5rem;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.grid {\r\n    display: grid;\r\n    grid-template-columns: repeat(2, 1fr);\r\n    gap: var(--gap);\r\n    counter-reset: gridcounter;\r\n}\r\n\r\n.grid-one-content {\r\n    display: flex;\r\n    flex-flow: column wrap;\r\n    justify-content: center;\r\n}\r\n\r\n.agendaH1 {\r\n    display: flex;\r\n    padding-bottom: 10px;\r\n    justify-content: center;\r\n    align-items: center;\r\n    font-size: 3rem;\r\n}\r\n\r\n.agendaP {\r\n    font-size: 2rem;\r\n    padding-bottom: 10px;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.errorDIV {\r\n    background-color: rgba(240, 21, 21, 0.295);\r\n    border-radius: 8px;\r\n    width: 600px;\r\n    height: 50px;\r\n    padding: 10px;\r\n    align-items: center;\r\n    display: flex;\r\n}\r\n\r\n.responsive-table {\r\n    padding: 20px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.tableDIV {\r\n    height: 100px;\r\n    width: 200px;\r\n}\r\n\r\nlabel {\r\n    font-size: 25px;\r\n}\r\n\r\ninput {\r\n    width: 400px;\r\n    font-size: 20px;\r\n    border-radius: 5px;\r\n    border-style: 0.5px solid black;\r\n}\r\n\r\nbutton {\r\n    width: 400px;\r\n    height: 30px;\r\n    border-radius: 6px;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.spacing {\r\n    padding: 10px;\r\n}\r\n\r\n.signuphere {\r\n    color: rgba(50, 50, 230, 0.849);\r\n}\r\n\r\n.hello {\r\n    font-size: 3rem;\r\n    font-weight: 700;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.hellobellow {\r\n    font-size: 2.3rem;\r\n    font-weight: 700;\r\n}\r\n\r\n.formulario1 {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

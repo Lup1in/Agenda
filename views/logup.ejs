@@ -1,0 +1,35 @@
+<%- include('includes/head.ejs'); %>
+    <%- include('includes/navLogin.ejs'); %>
+        <div class="container">
+            <div>
+                <div>
+                    <h1 class="hello">Cadastre-se!</h1>
+                    <div class="spacing"></div>
+                    <form action="/login/logup" method="POST">
+                        <label for="">name</label> <br>
+                        <input type="text" name="nickname" placeholder="">
+
+                        <div class="spacing"></div>
+
+                        <label for="e-mail">e-mail</label><br>
+                        <input type="email" name="email" placeholder="">
+                        <div class="spacing"></div>
+
+
+                        <label for="password">password</label><br>
+                        <input type="password" name="password" placeholder="">
+                        <br>
+                        <div class="spacing"></div>
+                        <label for="password">repeat your password</label><br>
+                        <input type="password" name="password" placeholder="">
+                        <div class="spacing"></div>
+                        <div class="testandob">
+                            <button>Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <%- include('includes/fotter.ejs'); %>

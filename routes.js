@@ -7,5 +7,5 @@ route.get('/', homeController.index);
 
 // rotas de login
 route.get('/login/index', loginController.index);
-
+route.get('/login/logup', loginController.logup);
 module.exports = route;

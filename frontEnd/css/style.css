@@ -89,6 +89,20 @@ a {
     justify-content: center;
     align-items: center;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap);
+    counter-reset: gridcounter;
+}
+
+.grid-one-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
 .agendaH1 {
     display: flex;
     padding-bottom: 10px;
@@ -124,25 +138,27 @@ a {
 
 .tableDIV {
     height: 100px;
-    width: 200px;    
-};
-
-.form-group {
     width: 200px;
-    height: 200px;
 }
-label { 
+
+label {
     font-size: 25px;
 }
+
 input {
+    width: 400px;
     font-size: 20px;
     border-radius: 5px;
+    border-style: 0.5px solid black;
 }
 
 button {
-    width: 250px;
+    width: 400px;
     height: 30px;
     border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .spacing {
@@ -151,4 +167,23 @@ button {
 
 .signuphere {
     color: rgba(50, 50, 230, 0.849);
+}
+
+.hello {
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hellobellow {
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.formulario1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
