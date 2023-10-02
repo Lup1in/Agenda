@@ -1,9 +1,7 @@
 require('dotenv').config();
-
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-
 
 mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
@@ -14,17 +12,15 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')
 const flash = require('connect-flash');
 
-const mainRoutes = require('./routes')
 const path = require('path');
-const helmet = require('helmet');
-const csrf = require('csurf');
+const mainRoutes = require('./routes')
+//const csrf = require('csurf');
 const myMiddle = require('./src/middlewares/middleware.js');
-const checkCsrfError = require('./src/middlewares/middleware.js');
-const csrfMiddleware = require('./src/middlewares/middleware.js');
+//const checkCsrfError = require('./src/middlewares/middleware.js');
+//const csrfMiddleware = require('./src/middlewares/middleware.js');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.resolve(__dirname, 'public')));
-app.use(helmet());
 
 const sessionOptions = session({
     secret: 'secret teste 2023',
@@ -42,10 +38,10 @@ app.use(flash());
 app.set('views', path.resolve((__dirname, './views')));
 app.set('view engine', 'ejs');
 
-app.use(csrf());
-app.use(checkCsrfError);
-app.use(csrfMiddleware);
+//app.use(csrf());
 app.use(myMiddle);
+//app.use(checkCsrfError);
+//app.use(csrfMiddleware);
 app.use(mainRoutes);
 
 app.on('app pronto', () => {

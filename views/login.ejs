@@ -4,9 +4,11 @@
             <div>
                 <div>
                     <h1 class="hello">Olá!</h1>
-                    <h2 class="hellobellow">Tenha uma Agenda! </h1>
+                    <h2 class="hellobellow">Tenha uma Agenda!</h1>
                         <div class="spacing"></div>
                         <form action="/login/register" method="POST">
+
+                            <%- include('includes/messages'); %>
 
                             <div class="form-group">
                                 <label for="">name</label> <br>
@@ -29,7 +31,7 @@
                         </form>
                 </div>
                 <div class="spacing"></div>
-                <div>Já tem uma conta? <span class="signuphere">entre aqui</span></div>
+                <div>Já tem uma conta? <span class="signuphere"><a href="">entre aqui</a></span></div>
             </div>
         </div>
         <%- include('includes/fotter.ejs'); %>
