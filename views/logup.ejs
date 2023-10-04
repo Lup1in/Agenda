@@ -5,25 +5,27 @@
                 <div>
                     <h1 class="hello">Entre na sua conta!</h1>
                     <div class="spacing"></div>
-                    <form action="/login/logup" method="POST">
-                            <label for="">Seu nome</label> <br>
-                            <input type="text" name="nickname" placeholder="">
+                    <form action="/login/login" method="POST">
 
-                            <div class="spacing"></div>
+                        <%- include('includes/messages'); %>
 
-                            <label for="e-mail">E-mail</label><br>
+                        <div class="spacing"></div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail</label><br>
                             <input type="email" name="email" placeholder="">
-                            <div class="spacing"></div>
+                        </div>
+                        <div class="spacing"></div>
 
-
+                        <div class="form-group">
                             <label for="password">Sua senha</label><br>
                             <input type="password" name="password" placeholder="">
-                            <br>
-                            <div class="spacing"></div>
-                            <div class="spacing"></div>
-                            <div class="testandob">
-                                <button>Entrar</button>
-                            </div>
+                        </div>
+                        <br>
+                        <div class="spacing"></div>
+                        <div class="testandob">
+                            <button>Entrar</button>
+                        </div>
                     </form>
                 </div>
             </div>
