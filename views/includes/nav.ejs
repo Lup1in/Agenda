@@ -5,13 +5,16 @@
 
             <li><a href="/contato/index">Cadastrar contato</a></li>
 
-            <% if(user) %> 
+            <% if(user) { %> 
             <ul>
                 <li><a href=""></a></li>
                 <li><a href="/login/logout">Logout</a></li>
-                <% else  { %> 
+            </ul>
+                <% } else  { %> 
+                    <ul>
                     <li><a href=""></a></li>
-                    <li><a href="/login/index">Entrar</a></li>
+                    <li><a href="/login/logup">Entrar</a></li>
+                </ul>
                     <% } %>
             </ul>
         </nav>
