@@ -1,5 +1,5 @@
-<%- include('includes/head.ejs'); %>
-    <%- include('includes/navContact.ejs'); %>
+<%- include('includes/head.ejs') %>
+    <%- include('includes/navContact.ejs') %>
 
         <div class="container">
             <div>
@@ -7,29 +7,32 @@
                 <p class="agendaP">Crie ou edite o seu contato abaixo!</p>
             </div>
         </div>
+
         <div class="formContainer">
             <form action="/contato/register" method="POST">
+                
                 <%- include('includes/messages'); %>
-                    <div class="form-group">
-                        <label for="name">Nome</label>
-                        <input type="text" name="nome">
-                    </div>
-                    <div class="form-group">
-                        <label for="sobrenome">Sobrenome</label>
-                        <input type="text" name="sobrenome">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" name="email">
-                    </div>
 
-                    <div class="form-group">
-                        <label for="tel">Telefone</label>
-                        <input type="tel" name="tel">
-                    </div>
-                    <div class="spacing"></div>
-                    <button class="contactButton">Salvar</button>
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" name="nome">
+                </div>
+                <div class="form-group">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" name="sobrenome">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="tel">Telefone</label>
+                    <input type="tel" name="tel">
+                </div>
+                <div class="spacing"></div>
+                <button class="contactButton">Salvar</button>
             </form>
         </div>
         </div>
-        <%- include('includes/fotter.ejs'); %>
+        <%- include('includes/fotter.ejs') %>
