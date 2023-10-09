@@ -8,9 +8,7 @@ module.exports = (req, res, next) => {
 exports.loginRequired = (req, res, next) => {
     if (!req.session.user) {
         req.flash('errors', 'Você precisa fazer login.');
-        req.session.save(function () {
-            return res.redirect('/');
-        });
+        req.session.save(() => res.redirect('/'));
         return;
     }
     next();
