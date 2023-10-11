@@ -7,10 +7,10 @@
                 <p class="agendaP">Crie ou edite o seu contato abaixo.</p>
             </div>
         </div>
+
         <div class="spacing"></div>
 
-
-        <%- include('includes/messages'); %>
+        <%- include('includes/messages') %>
             <div class="formContainer">
                 <% if(contato._id) { %>
                     <form action="/contato/edit/<%= contato._id %>" method="POST">
