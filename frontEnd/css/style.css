@@ -130,7 +130,7 @@ a {
 }
 
 .sucessoDIV {
-    background-color: rgb(95, 238, 95);
+    background-color: rgba(95, 238, 95, 0.527);
     border-radius: 8px;
     width: 600px;
     height: 50px;

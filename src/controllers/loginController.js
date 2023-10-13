@@ -47,7 +47,7 @@ exports.login = async function (req, res) {
         req.flash('success', 'Bem vindo(a) a sua Agenda!');
         req.session.user = login.user;
         req.session.save(function () {
-            return res.redirect('back');
+            return res.redirect('/');
         });
 
     } catch (e) {

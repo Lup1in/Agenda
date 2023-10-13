@@ -7,12 +7,11 @@
 
                 <div class="">
                     <h1 class="agendaH1">Agenda</h1>
-                    <p class="agendaP">Seus contatos estão abaixo.</p>
-
-                    <%- include('includes/messages') %>
 
                         <% if(user) { %>
                             <div>
+                                <%- include('includes/messages') %>
+                                <p class="agendaP">Seus contatos estão abaixo.</p>
                                 <table class="table-contatos">
                                     <% contatos.forEach(contato=> { %>
                                         <tr>
@@ -37,7 +36,7 @@
                                 </table>
                             </div>
                             <% } else { %>
-                                <p>Logue para ver os seus contatos.</p>
+                                <p class="agendaP">Logue para ver os seus contatos.</p>
                                 <% } %>
                                     <div class=""></div>
 

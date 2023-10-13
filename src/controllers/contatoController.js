@@ -61,13 +61,23 @@ exports.edit = async (req, res) => {
     }
 };
 
-exports.delete = async function (req, res) {
-    if (!req.params.id) return res.render('404');
+exports.delete = async (req, res) => {
+    try {
+        if (!req.params.id) {
+            return res.render('404');
+        };
 
-    const contato = await Contato.delete(req.params.id);
-    if (!contato) return res.render('404');
-
+        const contato = await Contato.delete(req.params.id);
+        if (!contato) {
+            return res.render('404');
+        }
+    } catch (e) {
+        console.log(e);
+        return res.render('404');
+    }
     req.flash('success', 'Contato apagado com sucesso.');
-    req.session.save(() => res.redirect('back'));
+    req.session.save(function () {
+        return res.redirect('back');
+    });
     return;
 };
